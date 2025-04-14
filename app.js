@@ -3,7 +3,9 @@ const dotenv = require('dotenv')
 const app = express();
 const cors = require('cors')
 
-app.use(cors())
+app.use(cors({
+    origin: '*', // hoặc cụ thể hơn là: 'https://your-firebase-site.web.app'
+  }));
 //middleware
 app.use(express.json());
 
